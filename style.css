@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0f172a;
+}
+
+.login-card {
+  width: 350px;
+  background: #1e293b;
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  position: relative;
+}
+
+/* Лицо персонажа */
+.face-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.face {
+  width: 100px;
+  height: 100px;
+  background: #38bdf8;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+/* Глаза */
+.eye {
+  width: 26px;
+  height: 26px;
+  background: #ffffff;
+  border-radius: 50%;
+  position: absolute;
+  top: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-eye { left: 22px; }
+.right-eye { right: 22px; }
+
+.pupil {
+  width: 10px;
+  height: 10px;
+  background: #0f172a;
+  border-radius: 50%;
+  transition: transform 0.1s ease;
+}
+
+/* Рот */
+.mouth {
+  width: 30px;
+  height: 10px;
+  border-bottom: 4px solid #0f172a;
+  border-radius: 0 0 15px 15px;
+  position: absolute;
+  bottom: 22px;
+  transition: all 0.3s ease;
+}
+
+/* Если введен пароль (закрывает глаза) */
+.face.hide-eyes .pupil {
+  transform: translateY(-12px) scaleY(0.1) !important;
+}
+
+.face.hide-eyes .mouth {
+  width: 20px;
+  height: 4px;
+  border-radius: 2px;
+  background: #0f172a;
+}
+
+/* Поля формы */
+h2 {
+  color: #f8fafc;
+  margin-bottom: 25px;
+  font-size: 22px;
+}
+
+.input-box {
+  position: relative;
+  margin-bottom: 18px;
+}
+
+.input-box .icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #94a3b8;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 12px 15px 12px 42px;
+  background: #334155;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  color: #fff;
+  outline: none;
+  font-size: 14px;
+}
+
+.input-box input:focus {
+  border-color: #38bdf8;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  background: #38bdf8;
+  border: none;
+  border-radius: 10px;
+  color: #0f172a;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-btn:hover {
+  background: #0284c7;
+  color: #fff;
+}
